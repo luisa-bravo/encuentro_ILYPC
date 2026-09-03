@@ -1,0 +1,34 @@
+SITIO ESTÁTICO DE MATERIALES ILYPC - UNAHUR
+===========================================
+
+ABRIR EN LA COMPUTADORA
+1. Descomprimir el ZIP completo.
+2. Abrir el archivo index.html con el navegador.
+
+EDITAR
+- index.html contiene el contenido principal.
+- css/estilos.css contiene colores, tamaños y diseño.
+- js/sitio.js controla solamente el menú adaptable a celulares.
+- imagenes contiene el logo y las imágenes de portada.
+- materiales contiene las guías y presentaciones.
+- trabajos-practicos contiene consignas, PDF y entregas.
+
+GALERÍA DE MOMENTOS
+- La portada incluye un bloque que conduce a galeria.html.
+- Las imágenes de muestra se encuentran en imagenes/galeria/.
+- Se pueden reemplazar conservando sus nombres. Si se cambia una extensión
+  (por ejemplo de SVG a JPG), también debe cambiarse en galeria.html.
+- Para agregar un video real, reemplace el bloque con clase "video-sample"
+  por un elemento <video controls> y guarde el archivo en una carpeta videos.
+- Complete siempre una descripción breve y evite nombres, datos personales o
+  rostros sin la autorización necesaria.
+
+SUBIR A GITHUB PAGES
+1. Crear un repositorio nuevo en GitHub.
+2. Subir el contenido de esta carpeta; index.html debe quedar en la raíz.
+3. Entrar en Settings > Pages.
+4. En Source elegir Deploy from a branch.
+5. Seleccionar la rama main y la carpeta /(root).
+6. Guardar y esperar a que GitHub muestre la dirección publicada.
+
+No requiere Node.js, npm, React ni compilación.

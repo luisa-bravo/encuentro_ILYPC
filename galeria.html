@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Momentos compartidos durante las clases con Pilas Bloques en UNAHUR.">
+  <title>Momentos compartidos · ILyPC · UNAHUR</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    /* Ajustes propios de la galería: conservan el estilo general del sitio. */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .gallery-item {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 .5rem 1.5rem rgba(23, 61, 46, .12);
+    }
+
+    .gallery-item-wide { grid-column: span 2; }
+
+    .tm-photo-secondary { grid-column: 1; }
+    .tm-video { grid-column: 2; }
+
+    .gallery-media,
+    .gallery-open {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      background: #16251f;
+    }
+
+    .gallery-open { cursor: zoom-in; }
+
+    .gallery-media img,
+    .gallery-media video,
+    .gallery-open img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tm-video .gallery-media video { object-fit: contain; }
+
+    .gallery-open > span {
+      position: absolute;
+      right: .75rem;
+      bottom: .75rem;
+      padding: .4rem .7rem;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(0, 0, 0, .72);
+      font-size: .82rem;
+    }
+
+    .gallery-item figcaption {
+      display: grid;
+      gap: .25rem;
+      padding: 1rem 1.1rem 1.15rem;
+    }
+
+    .gallery-item figcaption strong { color: #116447; }
+    .gallery-item figcaption span { line-height: 1.45; }
+
+    /* Los videos filmados con el celular usan su proporción vertical real. */
+    .gallery-video-portrait .gallery-media {
+      width: min(100%, 22rem);
+      aspect-ratio: 9 / 16;
+      margin-inline: auto;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-item-wide { grid-column: span 2; }
+    }
+
+    @media (max-width: 620px) {
+      .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .gallery-item-wide { grid-column: auto; }
+      .tm-photo-secondary,
+      .tm-video { grid-column: auto; }
+      .gallery-open { aspect-ratio: 4 / 3; }
+    }
+  </style>
+  <script src="js/sitio.js" defer></script>
+  <script src="js/galeria.js" defer></script>
+</head>
+<body class="gallery-page">
+<a class="skip-link" href="#galeria">Saltar a la galería</a>
+<header class="site-header">
+  <a class="brand" href="index.html#inicio" aria-label="Volver al inicio del sitio"><img src="imagenes/unahur.png" alt="Universidad Nacional de Hurlingham"></a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+  <nav id="main-nav" aria-label="Navegación principal">
+    <a href="index.html#proyecto">Proyecto</a>
+    <a href="index.html#materiales">Materiales</a>
+    <a href="index.html#trabajos-practicos">Trabajos prácticos</a>
+    <a href="index.html#equipo">Equipo</a>
+    <a href="galeria.html" aria-current="page">Momentos</a>
+  </nav>
+</header>
+
+<main>
+  <header class="gallery-hero">
+    <a class="gallery-back" href="index.html">← Volver al sitio del proyecto</a>
+    <p class="eyebrow">Pilas Bloques en las aulas</p>
+    <h1>Momentos compartidos</h1>
+    <p>Una selección de escenas de las clases en las que estudiantes y docentes exploraron desafíos, intercambiaron ideas y construyeron soluciones con Pilas Bloques.</p>
+  </header>
+
+  <section class="gallery-intro" aria-label="Acerca de la galería">
+    <p>Las imágenes se presentan como un recorrido general de la experiencia.</p>
+    <span>Fotografías · videos · producciones</span>
+  </section>
+
+  <section class="gallery-grid" id="galeria" aria-label="Galería de momentos compartidos">
+    <figure class="gallery-item gallery-item-wide">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/TM_PILAS_BLOQUES.jpeg" data-alt="Clase viva de simulación de ejercicios con Pilas Bloques">
+        <img src="imagenes/galeria/TM_PILAS_BLOQUES.jpeg" alt="Clase viva de simulación de ejercicios con Pilas Bloques">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Clase viva de simulación · Pilas Bloques</strong><span>Estudiantes y docentes participan de una simulación colectiva de los ejercicios.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item tm-photo-secondary">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/TM2.jpeg" data-alt="Clase viva con estudiantes resolviendo ejercicios de Pilas Bloques">
+        <img src="imagenes/galeria/TM2.jpeg" alt="Clase viva con estudiantes resolviendo ejercicios de Pilas Bloques">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Simular para comprender</strong><span>Otra escena de la clase viva dedicada a representar y resolver los ejercicios.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card tm-video">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Video de la clase viva de simulación de ejercicios con Pilas Bloques">
+          <source src="imagenes/galeria/videoTM.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Clase viva · Registro en video</strong><span>Una experiencia de simulación compartida para poner en juego los ejercicios de Pilas Bloques.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-item-wide">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/Ejercicios1C_2026.jpeg" data-alt="Estudiantes explorando desafíos de Pilas Bloques en el aula de informática">
+        <img src="imagenes/galeria/Ejercicios1C_2026.jpeg" alt="Estudiantes explorando un desafío de Pilas Bloques en computadoras">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Ejercicios del primer cuatrimestre de 2026</strong><span>Primeras pruebas, recorridos e intercambio de estrategias en Pilas Bloques.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/2doParcial1C2026.jpeg" data-alt="Estudiantes resolviendo el segundo parcial del primer cuatrimestre de 2026">
+        <img src="imagenes/galeria/2doParcial1C2026.jpeg" alt="Grupo de estudiantes intercambiando ideas durante una actividad">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Segundo parcial · Primer cuatrimestre 2026</strong><span>Resolución de actividades de programación con Pilas Bloques.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Actividad de alternativa condicional coordinada por Facundo">
+          <source src="imagenes/galeria/EjFacundo2C202631_08_26.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Alternativa condicional · Facundo</strong><span>Registro de una actividad del segundo cuatrimestre de 2026.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/integradorJulio26.jpeg" data-alt="Estudiantes realizando la actividad integradora de julio de 2026">
+        <img src="imagenes/galeria/integradorJulio26.jpeg" alt="Docente acompañando la resolución de una actividad de programación">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Integrador · Julio 2026</strong><span>Estudiantes construyendo y revisando sus programas.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/Julieta1C2026.jpeg" data-alt="Clase acompañada por Julieta durante el primer cuatrimestre de 2026">
+        <img src="imagenes/galeria/Julieta1C2026.jpeg" alt="Clase acompañada por Julieta durante el primer cuatrimestre de 2026">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Clase con Julieta</strong><span>Acompañamiento durante la resolución de los desafíos.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-item-wide">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/NocheDeLasUNIVERSIDADES2025.jpeg" data-alt="Estudiantes presentando sus producciones en la Noche de las Universidades 2025">
+        <img src="imagenes/galeria/NocheDeLasUNIVERSIDADES2025.jpeg" alt="Estudiantes presentando sus producciones en la Noche de las Universidades 2025">
+        <span>Ampliar imagen</span>
+      </button>
+      <figcaption><strong>Noche de las Universidades 2025</strong><span>Presentación e intercambio de las producciones realizadas por estudiantes.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card gallery-video-portrait">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Estudiantes durante la Noche de las Universidades 2025">
+          <source src="imagenes/galeria/alumnosNochedelasUNIV.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Estudiantes en la Noche de las Universidades</strong><span>Un recorrido en video por la experiencia compartida.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Producción desarrollada en el proyecto y presentada por Ale">
+          <source src="imagenes/galeria/VideoAleProyecto.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Producción del proyecto · Ale</strong><span>Una idea construida y puesta en funcionamiento con Pilas Bloques.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card gallery-video-portrait">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Registro de una clase acompañada por Julieta">
+          <source src="imagenes/galeria/Julieta!C2026.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Resolver en clase</strong><span>Registro de una actividad acompañada por Julieta.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card gallery-item-wide">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Explicación y acompañamiento durante una clase con Julieta">
+          <source src="imagenes/galeria/Julieta.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Explicar y acompañar</strong><span>Orientaciones durante la construcción y revisión de los programas.</span></figcaption>
+    </figure>
+
+    <figure class="gallery-item gallery-video-card">
+      <div class="gallery-media">
+        <video controls preload="metadata" playsinline aria-label="Actividad del primer cuatrimestre de 2026 acompañada por Julieta">
+          <source src="imagenes/galeria/Julieta1C2026_2.mp4" type="video/mp4">
+          Tu navegador no permite reproducir este video.
+        </video>
+      </div>
+      <figcaption><strong>Primer cuatrimestre 2026</strong><span>Estudiantes poniendo a prueba distintas soluciones.</span></figcaption>
+    </figure>
+  </section>
+</main>
+
+<dialog class="lightbox" aria-labelledby="lightbox-title">
+  <div class="lightbox-bar"><h2 id="lightbox-title">Imagen ampliada</h2><button type="button" class="lightbox-close" aria-label="Cerrar imagen ampliada">Cerrar ×</button></div>
+  <img src="" alt="">
+</dialog>
+
+<footer><div><strong>Introducción a la Lógica y Problemas Computacionales</strong><span>Universidad Nacional de Hurlingham · <span data-year>2026</span></span></div><p>Proyecto educativo con Pilas Bloques</p></footer>
+</body>
+</html>
